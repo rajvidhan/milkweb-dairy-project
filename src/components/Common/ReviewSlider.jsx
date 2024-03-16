@@ -29,7 +29,7 @@ const ReviewSlider = () => {
           modifier: 1,
           slideShadows: false,
         }}
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={50}
         loop={true}
         breakpoints={{

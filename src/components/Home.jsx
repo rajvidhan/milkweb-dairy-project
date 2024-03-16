@@ -21,9 +21,10 @@ const Home = () => {
     <div>
       {/* section1  */}
 
-      <div className="bg-sky-100 lg:min-h-[886px]  w-full flex flex-row">
-        <div className="lg:mx-[100px] gap-10 w-[50%] flex flex-col  justify-center ">
-          <div className="w-[700px] flex flex-col items-center justify-center">
+      <div className="bg-sky-100 lg:min-h-[886px]  w-full flex flex-col-reverse lg:flex-row">
+        
+        <div className="lg:mx-[100px] mx-auto lg:w-[50%] flex  justify-center">
+          <div className="lg:w-[700px] gap-5 w-[400px] lg:my-auto my-3 flex flex-col ">
             <h1 className="text-4xl mb-10 font-bold">
               Dairy Products for{" "}
               <span className="text-5xl text-sky-200">
@@ -36,8 +37,6 @@ const Home = () => {
               around the world who put a premium on taste, nutrition, health,
               craftsmanship and sheer indulgence.
             </h4>
-          </div>
-          <div>
             <Link
               to={"/about"}
               className="w-[120px] flex items-center justify-center  h-10 rounded-md bg-sky-200 "
@@ -45,10 +44,11 @@ const Home = () => {
               <span className="mr-1">Learn More</span> <FaAngleDoubleRight />
             </Link>
           </div>
+         
         </div>
 
-        <div className="lg:mx-[100px] w-[50%] flex flex-col items-center justify-center">
-          <img src={pic5} className="w-[700px] rounded-lg  " />
+        <div className="lg:mx-[100px] mx-auto lg:w-[50%] flex flex-col items-center justify-center">
+          <img src={pic5} className="w-[700px] lg:rounded-lg  " />
         </div>
       </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
         <h1 className="text-5xl ">Categories</h1>
 
         <div className="flex flex-col gap-10">
-          <div className="flex gap-[100px]">
+          <div className="flex lg:flex-row flex-col  gap-[100px]">
             {/* 1st  */}
             <div className="group cursor-pointer   relative w-full border border-sky-200 transition-all hover:border-2 h-[340px] rounded-lg  sm:w-[430px]  overflow-hidden">
               <Link>
@@ -125,7 +125,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex gap-[100px]">
+          <div className="flex lg:flex-row flex-col  gap-[100px]">
             {/* 4th  */}
             <div className="group cursor-pointer   relative w-full border border-sky-200 transition-all hover:border-2 h-[340px] rounded-lg  sm:w-[430px]  overflow-hidden">
               <Link>
@@ -195,10 +195,10 @@ const Home = () => {
 
       {/* section 3   */}
 
-      <div className="items-center p-8  rounded-tl-3xl m-[100px] rounded-br-3xl bg-sky-100 flex flex-col ">
+      <div className="items-center p-8  rounded-tl-3xl lg:my-[100px] my-10 mx-3  lg:mx-[100px] rounded-br-3xl bg-sky-100 flex flex-col ">
         <h1 className="text-5xl text-white font-bold mb-[100px] ">Features</h1>
 
-        <div className="flex gap-8">
+        <div className="flex lg:flex-row flex-col gap-8">
           {/* 1st */}
           <div className=" flex gap-5 cursor-pointer w-full h-[200px]  sm:w-[430px] overflow-hidden">
             <div className="text-white text-8xl ">

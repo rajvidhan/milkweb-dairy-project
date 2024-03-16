@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import Logo from "../../assets/Logo.jpg"
 import { NavbarLinks } from '../../data/nav-links'
 import { AiOutlineMenu, AiOutlineShoppingCart } from "react-icons/ai"
 import ProfileDropDown from './ProfileDropDown'
-
+import { RxCross2 } from "react-icons/rx";
 
 
 const Navbar = () => {
+
+  const [showmenu,setshowmenu] = useState(false);
 
 
 
@@ -63,9 +65,37 @@ const Navbar = () => {
           <AiOutlineShoppingCart className='text-white cursor-pointer ' />    
              <ProfileDropDown />
       </div>
-      <button className="mr-4 md:hidden">
-        <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
-      </button>
+      {/* <button onClick={()=>setshowmenu(!showmenu)} className="mr-4  md:hidden">
+        {
+          showmenu ? <RxCross2 className='text-richblack-400' fontSize={24} fill="#AFB2BF" /> :  <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
+        }
+        {
+          showmenu && (
+            <div className='bg-richblack-700 h-[35px] z-50 '>
+               <ul className=''>
+          {NavbarLinks.map((link, index) => (
+            <li key={index}>
+              {
+         
+                <Link to={link.path}>
+                  <p
+                    className={`${
+                      matchRoute(link.path)
+                        ? "text-sky-100"
+                        : "text-richblack-25"
+                    }`}
+                  >
+                    {link.title}
+                  </p>
+                </Link>
+              }
+            </li>
+          ))}
+        </ul>
+            </div>
+          )
+        }      
+      </button> */}
     </div>
   </div>
   )
